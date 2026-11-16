@@ -1,64 +1,26 @@
 # Secure-IT
 
-Secure-IT is an iOS security application designed to validate encrypted event tickets in real time using QR-based cryptography. The project was built as a fraud-prevention solution for event access control and won **1st Place at ENACTUS 2025** out of 30+ teams.
+iOS team project exploring QR-based event-ticket verification.
 
-## Overview
+This repository is a fork of [AliciaJordan/SECURE-IT](https://github.com/AliciaJordan/SECURE-IT).
 
-Event ticket fraud can create financial losses, security risks, and poor user experiences for organizers and attendees. Secure-IT addresses this problem by using encrypted QR codes and a lightweight verification pipeline to confirm ticket authenticity quickly and reliably.
+## Project
 
-The application allows event staff to scan encrypted tickets, verify them against backend records, and determine whether a ticket is valid, invalid, duplicated, or already used.
+The idea is to provide an event check-in workflow in which staff scan a ticket and receive a verification result. The existing project documentation describes encrypted QR payloads and a Firebase-backed ticket-status workflow.
 
-## Features
+## Technology
 
-- Encrypted QR-based ticket validation
-- Real-time ticket verification
-- iOS mobile scanning interface
-- Firebase backend integration
-- Secure ticket status tracking
-- Duplicate ticket detection
-- Fast verification pipeline
-- Team-based MVP developed under competition constraints
+- Swift and Xcode
+- iOS application project
+- QR scanning and ticket-status verification concepts
+- Firebase integration described in the project documentation
 
-## Tech Stack
+## Code
 
-**Mobile**
-- Swift
-- SwiftUI
-- CryptoKit
-- AVFoundation
+The Xcode project is located under [devTYSV2/](devTYSV2/). Open the project file in Xcode, inspect the configured targets and dependencies, and provide any required external configuration before building.
 
-**Backend / Cloud**
-- Firebase
-- Firestore
-- Firebase Authentication
+## Collaboration and verification
 
-**Security**
-- QR-based cryptography
-- Encrypted ticket payloads
-- Ticket validation logic
+This is a collaborative project; the repository is a fork, not evidence of sole authorship. Exact responsibilities and competition results should be documented with corroborating team information.
 
-**Tools**
-- Xcode
-- Git
-- GitHub
-
-## Project Highlights
-
-- Built an end-to-end iOS security app using Swift, CryptoKit, Firebase, and QR-based cryptography.
-- Designed a verification pipeline capable of processing **500+ scans per minute** with **<150ms latency**.
-- Created a real-time validation flow for encrypted event tickets.
-- Led a 4-person engineering team from concept to fully functional MVP.
-- Won **1st Place at ENACTUS 2025** out of 30+ teams for social and technical impact.
-
-## How It Works
-
-1. A ticket is generated with an encrypted QR payload.
-2. Event staff scans the QR code using the iOS app.
-3. The app decrypts or validates the ticket payload.
-4. Firebase is queried to check the ticket status.
-5. The app displays the result:
-   - Valid
-   - Invalid
-   - Already used
-   - Duplicate
-6. If valid, the ticket status is updated to prevent reuse.
+No throughput, scan-latency, security certification, or production readiness claim is made here. Those require repeatable testing and a security review.
